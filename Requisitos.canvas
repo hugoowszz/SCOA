@@ -1,0 +1,35 @@
+{
+	"nodes":[
+		{"id":"e9d546a267b1b5b1","type":"text","text":"Sistema de Controle de Oficinas Automotivas","x":20,"y":-720,"width":375,"height":55},
+		{"id":"955363e4137fd32b","type":"text","text":"Objetivo","x":148,"y":-600,"width":119,"height":60},
+		{"id":"eedcb858ce885256","type":"text","text":"Desenvolver um sistema para gerenciar orçamentos, serviços, estoque e funcionarios, substituindo o controle manual atualmente realizado em papel e planilhas","x":360,"y":-630,"width":380,"height":120},
+		{"id":"5700f115acdb7059","type":"text","text":"Criar Serviços","x":543,"y":-90,"width":250,"height":60},
+		{"id":"a3acae5e8798d64c","type":"text","text":"Cadastrar Orçamentos","x":543,"y":-360,"width":250,"height":50},
+		{"id":"07d2cdf80193671c","type":"text","text":"Gerenciar Funcionarios","x":543,"y":-300,"width":250,"height":60},
+		{"id":"17f3e415f2b799b8","type":"text","text":"Emitir Orçamentos","x":543,"y":-230,"width":250,"height":60},
+		{"id":"e06c2ed9a5adab70","type":"text","text":"Controlar Estoque","x":543,"y":-160,"width":250,"height":60},
+		{"id":"109929832ef2807c","type":"text","text":"Requisitos Funcionais","x":83,"y":-220,"width":250,"height":60},
+		{"id":"219f2cceca663ba7","type":"text","text":"Como funciona um orçamento?","x":980,"y":-520,"width":280,"height":60},
+		{"id":"683a2e8cbf065639","type":"text","text":"Qual o maior problema hoje?","x":980,"y":-600,"width":280,"height":60},
+		{"id":"66f4bbf5199e81f5","type":"text","text":"Quem vai utilizar o sistema?","x":980,"y":-680,"width":280,"height":60},
+		{"id":"fc8c87ffc4529287","type":"text","text":"Requisitos não Funcionais","x":83,"y":160,"width":250,"height":60},
+		{"id":"db72bcbc3169f09f","type":"text","text":"Autenticação","x":543,"y":130,"width":250,"height":50},
+		{"id":"81b3f0cb2bb1a3ed","type":"text","text":"Responsividade","x":543,"y":190,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"9ffebe75546254ff","fromNode":"109929832ef2807c","fromSide":"right","toNode":"a3acae5e8798d64c","toSide":"left"},
+		{"id":"6bc9f0fa76dca32a","fromNode":"109929832ef2807c","fromSide":"right","toNode":"07d2cdf80193671c","toSide":"left"},
+		{"id":"5a573bd567052944","fromNode":"109929832ef2807c","fromSide":"right","toNode":"17f3e415f2b799b8","toSide":"left"},
+		{"id":"392f7ba43e6c7aaa","fromNode":"109929832ef2807c","fromSide":"right","toNode":"e06c2ed9a5adab70","toSide":"left"},
+		{"id":"a1c59b1c79b0c2f0","fromNode":"109929832ef2807c","fromSide":"right","toNode":"5700f115acdb7059","toSide":"left"},
+		{"id":"fd246f3cf7cee6d1","fromNode":"e9d546a267b1b5b1","fromSide":"bottom","toNode":"955363e4137fd32b","toSide":"top"},
+		{"id":"882efd408e2c99ec","fromNode":"955363e4137fd32b","fromSide":"right","toNode":"eedcb858ce885256","toSide":"left"},
+		{"id":"5b1d5d343ee9390a","fromNode":"e9d546a267b1b5b1","fromSide":"left","toNode":"109929832ef2807c","toSide":"left"},
+		{"id":"be8cb9c2917e7b59","fromNode":"eedcb858ce885256","fromSide":"right","toNode":"66f4bbf5199e81f5","toSide":"left"},
+		{"id":"40b3f073766d9761","fromNode":"eedcb858ce885256","fromSide":"right","toNode":"683a2e8cbf065639","toSide":"left"},
+		{"id":"18f5bf230becb4e9","fromNode":"eedcb858ce885256","fromSide":"right","toNode":"219f2cceca663ba7","toSide":"left"},
+		{"id":"6b7167a58eba7fae","fromNode":"fc8c87ffc4529287","fromSide":"right","toNode":"db72bcbc3169f09f","toSide":"left"},
+		{"id":"79e68bf76cd7baf6","fromNode":"fc8c87ffc4529287","fromSide":"right","toNode":"81b3f0cb2bb1a3ed","toSide":"left"},
+		{"id":"d8d08625f78aedbe","fromNode":"e9d546a267b1b5b1","fromSide":"left","toNode":"fc8c87ffc4529287","toSide":"left"}
+	]
+}
