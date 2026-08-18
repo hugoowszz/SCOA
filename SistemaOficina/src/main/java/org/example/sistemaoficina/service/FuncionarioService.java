@@ -5,11 +5,11 @@ import org.example.sistemaoficina.repository.FuncionarioRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GerenciadorDeOficina {
+public class FuncionarioService {
 
     private final FuncionarioRepository funcionarioRepository;
 
-    public GerenciadorDeOficina(FuncionarioRepository funcionarioRepository) {
+    public FuncionarioService(FuncionarioRepository funcionarioRepository) {
         this.funcionarioRepository = funcionarioRepository;
     }
 
@@ -17,7 +17,6 @@ public class GerenciadorDeOficina {
         Funcionario novoFuncionario = new Funcionario();
         novoFuncionario.setNome(nome);
         novoFuncionario.setTelefone(telefone);
-        funcionarioRepository.save(novoFuncionario);
-        return novoFuncionario;
+        return funcionarioRepository.save(novoFuncionario);
     }
 }
