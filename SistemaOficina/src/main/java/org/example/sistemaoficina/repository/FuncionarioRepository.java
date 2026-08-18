@@ -1,4 +1,4 @@
-package org.example.sistemaoficina;
+package org.example.sistemaoficina.repository;
 
 import org.example.sistemaoficina.entity.Funcionario;
 import org.springframework.data.jpa.repository.JpaRepository;
