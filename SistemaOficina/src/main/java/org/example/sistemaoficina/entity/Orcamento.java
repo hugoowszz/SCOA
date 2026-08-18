@@ -18,23 +18,23 @@ import lombok.Setter;
 public class Orcamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
 
     @NotBlank
-    String modeloVeiculo;
+    private String modeloVeiculo;
 
     @NotBlank
-    String marcaVeiculo;
+    private String marcaVeiculo;
 
     @NotBlank
-    String corVeiculo;
+    private String corVeiculo;
 
     @NotBlank
     @Size(max = 7)
-    String placaVeiculo;
+    private String placaVeiculo;
 
-    String observacao;
+    private String observacao;
 
     @NotNull
-    Double preco;
+    private Double preco;
 }

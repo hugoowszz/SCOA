@@ -17,20 +17,20 @@ import lombok.Setter;
 public class Material {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
 
     @NotBlank
-    String nome;
+    private String nome;
 
     @NotBlank
-    String descricao;
+    private String descricao;
 
     @NotBlank
-    String unidadeMedida;
+    private String unidadeMedida;
 
     @NotNull
-    Double quantidadeEstoque;
+    private Double quantidadeEstoque;
 
     @NotNull
-    Double estoqueMinimo;
+    private Double estoqueMinimo;
 }

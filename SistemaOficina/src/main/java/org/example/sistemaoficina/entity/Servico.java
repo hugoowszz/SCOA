@@ -20,31 +20,31 @@ import java.time.LocalDateTime;
 public class Servico {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "orcamento_id")
     @NotNull
-    Orcamento orcamento;
+    private Orcamento orcamento;
 
     @ManyToOne
     @JoinColumn(name = "funcionario_id")
     @NotNull
-    Funcionario funcionario;
+    private Funcionario funcionario;
 
     @NotBlank
-    String nomeCliente;
+    private String nomeCliente;
 
     @NotBlank
-    String contatoCliente;
+    private String contatoCliente;
 
     @NotBlank
     @Pattern(regexp = "^(Não iniciado|Em andamento|Entregue)$")
-    String status;
+    private String status;
 
-    LocalDateTime dataCriacao;
+    private LocalDateTime dataCriacao;
 
-    LocalDateTime dataFim;
+    private LocalDateTime dataFim;
 
-    String metodoPagamento;
+    private String metodoPagamento;
 }

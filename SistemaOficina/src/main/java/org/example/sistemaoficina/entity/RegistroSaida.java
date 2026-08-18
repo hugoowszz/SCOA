@@ -18,16 +18,19 @@ import java.time.LocalDateTime;
 public class RegistroSaida {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "material_id")
     @NotNull
-    Material material;
+    private Material material;
 
     @NotNull
-    Double quantidadeGasta;
+    private Double quantidadeGasta;
 
     @NotNull
-    LocalDateTime dataSaida;
+    private LocalDateTime dataSaida;
+
+    @Transient
+    private String alertaEstoque;
 }

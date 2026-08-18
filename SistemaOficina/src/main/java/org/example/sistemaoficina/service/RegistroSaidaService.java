@@ -2,6 +2,7 @@ package org.example.sistemaoficina.service;
 
 import org.example.sistemaoficina.entity.Material;
 import org.example.sistemaoficina.entity.RegistroSaida;
+import org.example.sistemaoficina.repository.MaterialRepository;
 import org.example.sistemaoficina.repository.RegistroSaidaRepository;
 import org.springframework.stereotype.Service;
 import jakarta.persistence.EntityNotFoundException;
@@ -15,8 +16,11 @@ public class RegistroSaidaService {
 
     private final RegistroSaidaRepository registroSaidaRepository;
 
-    public RegistroSaidaService(RegistroSaidaRepository registroSaidaRepository) {
+    private final MaterialService materialService;
+
+    public RegistroSaidaService(RegistroSaidaRepository registroSaidaRepository, MaterialRepository materialRepository, MaterialService materialService) {
         this.registroSaidaRepository = registroSaidaRepository;
+        this.materialService = materialService;
     }
 
     public RegistroSaida criarRegistroSaida(Material material, Double quantidadeGasta, LocalDateTime dataSaida) {
@@ -24,6 +28,16 @@ public class RegistroSaidaService {
         novoRegistroSaida.setMaterial(material);
         novoRegistroSaida.setQuantidadeGasta(quantidadeGasta);
         novoRegistroSaida.setDataSaida(dataSaida);
+
+        Material materialUsado = materialService.listarPorId(material.getId());
+
+        materialUsado.setQuantidadeEstoque(material.getQuantidadeEstoque() - quantidadeGasta);
+        materialService.editar(materialUsado.getId(), materialUsado);
+
+        if(materialUsado.getQuantidadeEstoque() < materialUsado.getEstoqueMinimo()) {
+            novoRegistroSaida.setAlertaEstoque("Atenção: O estoque caiu a baixo do mínimo!");
+        }
+
         return registroSaidaRepository.save(novoRegistroSaida);
     }
 

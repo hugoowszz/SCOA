@@ -16,11 +16,11 @@ import lombok.Setter;
 public class Funcionario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
 
     @NotBlank
-    String nome;
+    private String nome;
 
     @NotBlank
-    String telefone;
+    private String telefone;
 }
