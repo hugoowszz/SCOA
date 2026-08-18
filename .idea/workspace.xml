@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e97c15a1-f58c-4834-9dbb-d94fc9abb5cf" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="24" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "hugoowszz"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/hugoowszz/SCOA.git",
+    "accountId": "778470b2-6cf5-428d-a422-16f8739bcd4b"
+  }
+}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000000000009828" />
+      <entry key="S2" value="1.0019803310242101" />
+      <entry key="S5" value="1.1746912677068149" />
+      <entry key="S10" value="1.819386254340999" />
+      <entry key="S30" value="3.4290612869046346" />
+      <entry key="S60" value="4.8415105937864" />
+      <entry key="M2" value="8.036743206547957" />
+      <entry key="M5" value="19.602419037644278" />
+      <entry key="M10" value="36.078836250906186" />
+      <entry key="M15" value="46.75604653429614" />
+      <entry key="M30" value="62.4554106510344" />
+      <entry key="H1" value="73.01244255801244" />
+      <entry key="H2" value="79.16643392154499" />
+      <entry key="H4" value="82.49327376946032" />
+      <entry key="D1" value="85.40260377602613" />
+      <entry key="W1" value="85.91433469268823" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="2.3330834859314624E-47" />
+      <entry key="MS500" value="5.92699504802596E-10" />
+      <entry key="S2" value="0.008183078660200356" />
+      <entry key="S5" value="0.26488206875845116" />
+      <entry key="S10" value="0.9591604744184612" />
+      <entry key="S30" value="2.4434715461829866" />
+      <entry key="S60" value="3.2842154168627844" />
+      <entry key="M2" value="4.7639485534559185" />
+      <entry key="M5" value="9.396495203402829" />
+      <entry key="M10" value="14.704217617939074" />
+      <entry key="M15" value="17.867279718165147" />
+      <entry key="M30" value="22.369878475802224" />
+      <entry key="H1" value="25.351620055156626" />
+      <entry key="H2" value="27.081915127233685" />
+      <entry key="H4" value="28.01599807182219" />
+      <entry key="D1" value="28.832398382060486" />
+      <entry key="W1" value="28.97596689897288" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.498476713325771E-7" />
+      <entry key="MS500" value="0.04316482665083378" />
+      <entry key="S2" value="0.4623741345813789" />
+      <entry key="S5" value="1.0971179956867307" />
+      <entry key="S10" value="2.4710460861327883" />
+      <entry key="S30" value="5.6602066199669725" />
+      <entry key="S60" value="7.9853663095900265" />
+      <entry key="M2" value="12.704486194672711" />
+      <entry key="M5" value="28.925165587450213" />
+      <entry key="M10" value="50.72250891218201" />
+      <entry key="M15" value="64.57304015530164" />
+      <entry key="M30" value="84.79295866826168" />
+      <entry key="H1" value="98.34550277584023" />
+      <entry key="H2" value="106.23837391530634" />
+      <entry key="H4" value="110.50409669002053" />
+      <entry key="D1" value="114.2341123200241" />
+      <entry key="W1" value="114.89017378598605" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3HvGRTaPWUnD3nTADelfgXp3TkS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "New/updated database configurations found",
+    "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.SistemaOficinaApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/code/Faculdade/SCOA",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="SistemaOficinaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="SistemaOficina" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.sistemaoficina.SistemaOficinaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.26222.65" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.26222.65" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Logical" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e97c15a1-f58c-4834-9dbb-d94fc9abb5cf" name="Changes" comment="" />
+      <created>1786741122041</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1786741122041</updated>
+      <workItem from="1786741123105" duration="1870000" />
+      <workItem from="1787015621715" duration="122000" />
+      <workItem from="1787015807772" duration="43000" />
+      <workItem from="1787015910311" duration="237000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
