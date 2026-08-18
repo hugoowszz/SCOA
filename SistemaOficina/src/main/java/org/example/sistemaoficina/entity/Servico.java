@@ -42,7 +42,6 @@ public class Servico {
     @Pattern(regexp = "^(Não iniciado|Em andamento|Entregue)$")
     String status;
 
-    @NotNull
     LocalDateTime dataCriacao;
 
     LocalDateTime dataFim;

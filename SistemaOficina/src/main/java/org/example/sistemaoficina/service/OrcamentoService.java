@@ -36,14 +36,14 @@ public class OrcamentoService {
         return orcamentoRepository.findById(id).orElseThrow(EntityNotFoundException::new);
     }
 
-    public Orcamento editar(Long id, String modeloVeiculo, String marcaVeiculo, String corVeiculo, String placaVeiculo, String observacao, Double preco) {
+    public Orcamento editar(Long id, Orcamento novoOrcamento) {
         Orcamento orcamento = orcamentoRepository.findById(id).orElseThrow(EntityNotFoundException::new);
-        orcamento.setModeloVeiculo(modeloVeiculo);
-        orcamento.setMarcaVeiculo(marcaVeiculo);
-        orcamento.setCorVeiculo(corVeiculo);
-        orcamento.setPlacaVeiculo(placaVeiculo);
-        orcamento.setObservacao(observacao);
-        orcamento.setPreco(preco);
+        orcamento.setModeloVeiculo(novoOrcamento.getModeloVeiculo());
+        orcamento.setMarcaVeiculo(novoOrcamento.getMarcaVeiculo());
+        orcamento.setCorVeiculo(novoOrcamento.getCorVeiculo());
+        orcamento.setPlacaVeiculo(novoOrcamento.getPlacaVeiculo());
+        orcamento.setObservacao(novoOrcamento.getObservacao());
+        orcamento.setPreco(novoOrcamento.getPreco());
         return orcamentoRepository.save(orcamento);
     }
 

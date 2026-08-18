@@ -31,10 +31,10 @@ public class FuncionarioService {
         return funcionarioRepository.findById(id).orElseThrow(EntityNotFoundException::new);
     }
 
-    public Funcionario editar(Long id, String nome, String telefone) {
+    public Funcionario editar(Long id, Funcionario novoFuncionario) {
         Funcionario funcionario = funcionarioRepository.findById(id).orElseThrow(EntityNotFoundException::new);
-        funcionario.setNome(nome);
-        funcionario.setTelefone(telefone);
+        funcionario.setNome(novoFuncionario.getNome());
+        funcionario.setTelefone(novoFuncionario.getTelefone());
         return funcionarioRepository.save(funcionario);
     }
 

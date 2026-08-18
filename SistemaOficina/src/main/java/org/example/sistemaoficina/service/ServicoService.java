@@ -42,16 +42,16 @@ public class ServicoService {
         return servicoRepository.findById(id).orElseThrow(EntityNotFoundException::new);
     }
 
-    public Servico editar(Long id, Orcamento orcamento, Funcionario funcionario, String nomeCliente, String contatoCliente, String status, LocalDateTime dataCriacao, LocalDateTime dataFim, String metodoPagamento) {
+    public Servico editar(Long id, Orcamento orcamento, Funcionario funcionario, Servico novoServico) {
         Servico servico = servicoRepository.findById(id).orElseThrow(EntityNotFoundException::new);
         servico.setOrcamento(orcamento);
         servico.setFuncionario(funcionario);
-        servico.setNomeCliente(nomeCliente);
-        servico.setContatoCliente(contatoCliente);
-        servico.setStatus(status);
-        servico.setDataCriacao(dataCriacao);
-        servico.setDataFim(dataFim);
-        servico.setMetodoPagamento(metodoPagamento);
+        servico.setNomeCliente(novoServico.getNomeCliente());
+        servico.setContatoCliente(novoServico.getContatoCliente());
+        servico.setStatus(novoServico.getStatus());
+        servico.setDataCriacao(novoServico.getDataCriacao());
+        servico.setDataFim(novoServico.getDataFim());
+        servico.setMetodoPagamento(novoServico.getMetodoPagamento());
         return servicoRepository.save(servico);
     }
 
