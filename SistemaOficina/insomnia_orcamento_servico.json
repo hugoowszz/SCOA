@@ -1,0 +1,170 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-01-01T00:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v8.0.0",
+  "resources": [
+    {
+      "_id": "wrk_1",
+      "parentId": null,
+      "modified": 1,
+      "created": 1,
+      "name": "Oficina - Orcamento e Servico",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_1",
+      "parentId": "wrk_1",
+      "modified": 1,
+      "created": 1,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:8080"
+      },
+      "_type": "environment"
+    },
+    {
+      "_id": "fld_orc",
+      "parentId": "wrk_1",
+      "modified": 1,
+      "created": 1,
+      "name": "Orcamentos",
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_orc_get_all",
+      "parentId": "fld_orc",
+      "modified": 1,
+      "created": 1,
+      "url": "{{ _.base_url }}/orcamentos",
+      "name": "Listar Todos",
+      "method": "GET",
+      "body": {},
+      "_type": "request"
+    },
+    {
+      "_id": "req_orc_get_id",
+      "parentId": "fld_orc",
+      "modified": 1,
+      "created": 1,
+      "url": "{{ _.base_url }}/orcamentos/1",
+      "name": "Listar por ID",
+      "method": "GET",
+      "body": {},
+      "_type": "request"
+    },
+    {
+      "_id": "req_orc_post",
+      "parentId": "fld_orc",
+      "modified": 1,
+      "created": 1,
+      "url": "{{ _.base_url }}/orcamentos",
+      "name": "Criar",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"modeloVeiculo\": \"Civic\",\n  \"marcaVeiculo\": \"Honda\",\n  \"corVeiculo\": \"Preto\",\n  \"placaVeiculo\": \"ABC1234\",\n  \"observacao\": \"Troca de óleo\",\n  \"preco\": 250.0\n}"
+      },
+      "headers": [{"name": "Content-Type", "value": "application/json"}],
+      "_type": "request"
+    },
+    {
+      "_id": "req_orc_put",
+      "parentId": "fld_orc",
+      "modified": 1,
+      "created": 1,
+      "url": "{{ _.base_url }}/orcamentos/1",
+      "name": "Editar",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"modeloVeiculo\": \"Civic\",\n  \"marcaVeiculo\": \"Honda\",\n  \"corVeiculo\": \"Prata\",\n  \"placaVeiculo\": \"ABC1234\",\n  \"observacao\": \"Troca de óleo e filtro\",\n  \"preco\": 300.0\n}"
+      },
+      "headers": [{"name": "Content-Type", "value": "application/json"}],
+      "_type": "request"
+    },
+    {
+      "_id": "req_orc_del",
+      "parentId": "fld_orc",
+      "modified": 1,
+      "created": 1,
+      "url": "{{ _.base_url }}/orcamentos/1",
+      "name": "Excluir",
+      "method": "DELETE",
+      "body": {},
+      "_type": "request"
+    },
+    {
+      "_id": "fld_srv",
+      "parentId": "wrk_1",
+      "modified": 1,
+      "created": 1,
+      "name": "Servicos",
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_srv_get_all",
+      "parentId": "fld_srv",
+      "modified": 1,
+      "created": 1,
+      "url": "{{ _.base_url }}/servicos",
+      "name": "Listar Todos",
+      "method": "GET",
+      "body": {},
+      "_type": "request"
+    },
+    {
+      "_id": "req_srv_get_id",
+      "parentId": "fld_srv",
+      "modified": 1,
+      "created": 1,
+      "url": "{{ _.base_url }}/servicos/1",
+      "name": "Listar por ID",
+      "method": "GET",
+      "body": {},
+      "_type": "request"
+    },
+    {
+      "_id": "req_srv_post",
+      "parentId": "fld_srv",
+      "modified": 1,
+      "created": 1,
+      "url": "{{ _.base_url }}/servicos",
+      "name": "Criar",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"orcamento\": {\"id\": 1},\n  \"funcionario\": {\"id\": 1},\n  \"nomeCliente\": \"Carlos Silva\",\n  \"contatoCliente\": \"11988888888\",\n  \"status\": \"Não iniciado\",\n  \"dataCriacao\": null \",\n  \"dataFim\": null,\n  \"metodoPagamento\": \"Cartão de Crédito\"\n}"
+      },
+      "headers": [{"name": "Content-Type", "value": "application/json"}],
+      "_type": "request"
+    },
+    {
+      "_id": "req_srv_put",
+      "parentId": "fld_srv",
+      "modified": 1,
+      "created": 1,
+      "url": "{{ _.base_url }}/servicos/1",
+      "name": "Editar",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"orcamento\": {\"id\": 1},\n  \"funcionario\": {\"id\": 1},\n  \"nomeCliente\": \"Carlos Silva\",\n  \"contatoCliente\": \"11988888888\",\n  \"status\": \"Em andamento\",\n  \"dataCriacao\": \"2024-01-01T10:00:00\",\n  \"dataFim\": null,\n  \"metodoPagamento\": \"Cartão de Crédito\"\n}"
+      },
+      "headers": [{"name": "Content-Type", "value": "application/json"}],
+      "_type": "request"
+    },
+    {
+      "_id": "req_srv_del",
+      "parentId": "fld_srv",
+      "modified": 1,
+      "created": 1,
+      "url": "{{ _.base_url }}/servicos/1",
+      "name": "Excluir",
+      "method": "DELETE",
+      "body": {},
+      "_type": "request"
+    }
+  ]
+}
