@@ -5,6 +5,7 @@ import org.example.sistemaoficina.repository.MaterialRepository;
 import org.springframework.stereotype.Service;
 import jakarta.persistence.EntityNotFoundException;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -50,5 +51,16 @@ public class MaterialService {
         } else {
             throw new EntityNotFoundException();
         }
+    }
+
+    public List<Material> listarMateriaisComEstoqueNoMinimo() {
+        List<Material> materiais = materialRepository.findAll();
+        List<Material> materiaisComEstoqueNoMinimo  = new ArrayList<>();
+        for (Material material : materiais) {
+            if (material.getQuantidadeEstoque() <= material.getEstoqueMinimo()) {
+                materiaisComEstoqueNoMinimo.add(material);
+            }
+        }
+        return materiaisComEstoqueNoMinimo;
     }
 }
