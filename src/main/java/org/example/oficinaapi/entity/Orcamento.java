@@ -1,37 +1,37 @@
 package org.example.oficinaapi.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Entity
 @Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "Orcamentos")
 public class Orcamento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
-    private String modelo_veiculo;
-    @NotBlank
-    private String marca_veiculo;
+    private String modeloVeiculo;
 
-    private String cor_veiculo;
+    private String marcaVeiculo;
 
-    private int ano_veiculo;
+    private String corVeiculo;
 
-    private String placa_veiculo;
+    private int anoVeiculo;
+
+    private String placaVeiculo;
 
     private String observacao;
-    @NotBlank
-    private double preco;
+
+    private BigDecimal preco;
 }

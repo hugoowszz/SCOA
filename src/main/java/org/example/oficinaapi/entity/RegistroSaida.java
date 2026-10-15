@@ -3,6 +3,7 @@ package org.example.oficinaapi.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,22 +17,19 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "Registros_Saida")
 public class RegistroSaida {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
+
     @ManyToOne
     @JoinColumn(name = "material_id")
-    private Material material_id;
+    private Material material;
 
-    @NotBlank
-    @Positive
-    private int quantidade_gasta;
+    private int quantidadeGasta;
 
-    @NotBlank
-    @FutureOrPresent
-    private LocalDate data_saida;
+    private LocalDate dataSaida;
 }

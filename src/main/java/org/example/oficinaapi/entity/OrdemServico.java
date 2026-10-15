@@ -2,6 +2,7 @@ package org.example.oficinaapi.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,34 +15,31 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "OrdensServico")
 public class OrdemServico {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
     @OneToOne
     @JoinColumn(name = "orcamento_id")
-    private Orcamento orcamento_id;
+    private Orcamento orcamento;
 
-    @NotBlank
+
     @OneToOne
     @JoinColumn(name = "funcionario_id")
-    private Funcionario funcionario_id;
+    private Funcionario funcionario;
 
-    @NotBlank
-    private String nome_cliente;
+    private String nomeCliente;
 
-    @NotBlank
-    private String contato_cliente;
+    private String contatoCliente;
 
     private String status;
 
-    @NotBlank
-    private LocalDate data_criacao;
+    private LocalDate dataCriacao;
 
-    private LocalDate data_entrega;
+    private LocalDate dataEntrega;
 
-    private String metodo_pagamento;
+    private String metodoPagamento;
 }
