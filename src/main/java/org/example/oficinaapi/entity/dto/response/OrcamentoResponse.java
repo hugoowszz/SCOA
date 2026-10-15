@@ -1,4 +1,13 @@
 package org.example.oficinaapi.entity.dto.response;
 
-public class OrcamentoResponse {
+import org.example.oficinaapi.entity.Orcamento;
+
+import java.math.BigDecimal;
+
+public record OrcamentoResponse(
+        Long id, String modeloVeiculo, String marcaVeiculo, BigDecimal preco
+) {
+    public static OrcamentoResponse from(Orcamento o) {
+        return new OrcamentoResponse(o.getId(), o.getModeloVeiculo(), o.getMarcaVeiculo(), o.getPreco());
+    }
 }
