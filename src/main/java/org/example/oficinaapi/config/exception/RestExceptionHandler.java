@@ -15,4 +15,5 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         ErrorEntity erro = new ErrorEntity("Entidade não encontrada!", HttpStatus.NOT_FOUND, LocalDate.now());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(erro);
     }
+
 }
