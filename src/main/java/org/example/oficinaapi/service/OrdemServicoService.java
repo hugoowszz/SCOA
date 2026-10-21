@@ -1,11 +1,13 @@
 package org.example.oficinaapi.service;
 
 import jakarta.persistence.EntityNotFoundException;
+import org.example.oficinaapi.entity.Cliente;
 import org.example.oficinaapi.entity.Funcionario;
 import org.example.oficinaapi.entity.Orcamento;
 import org.example.oficinaapi.entity.OrdemServico;
 import org.example.oficinaapi.entity.dto.request.OrdemServicoRequest;
 import org.example.oficinaapi.entity.dto.response.OrdemServicoResponse;
+import org.example.oficinaapi.repository.ClienteRepository;
 import org.example.oficinaapi.repository.FuncionarioRepository;
 import org.example.oficinaapi.repository.OrcamentoRepository;
 import org.example.oficinaapi.repository.OrdemServicoRepository;
@@ -19,15 +21,18 @@ public class OrdemServicoService {
     private final OrdemServicoRepository ordemServicoRepository;
     private final OrcamentoRepository orcamentoRepository;
     private final FuncionarioRepository funcionarioRepository;
+    private final ClienteRepository clienteRepository;
 
     public OrdemServicoService(
             OrdemServicoRepository ordemServicoRepository,
             OrcamentoRepository orcamentoRepository,
-            FuncionarioRepository funcionarioRepository
+            FuncionarioRepository funcionarioRepository,
+            ClienteRepository clienteRepository
     ) {
         this.ordemServicoRepository = ordemServicoRepository;
         this.orcamentoRepository = orcamentoRepository;
         this.funcionarioRepository = funcionarioRepository;
+        this.clienteRepository = clienteRepository;
     }
 
     public OrdemServicoResponse criarOrdemServico(OrdemServicoRequest request) {
@@ -35,12 +40,13 @@ public class OrdemServicoService {
                 .orElseThrow(() -> new EntityNotFoundException("Orçamento não encontrado"));
         Funcionario funcionario = funcionarioRepository.findById(request.funcionarioId())
                 .orElseThrow(() -> new EntityNotFoundException("Funcionário não encontrado"));
+        Cliente cliente = clienteRepository.findById(request.clienteId())
+                .orElseThrow(() -> new EntityNotFoundException("Cliente não encontrado"));
 
         OrdemServico ordemServico = new OrdemServico();
         ordemServico.setOrcamento(orcamento);
         ordemServico.setFuncionario(funcionario);
-        ordemServico.setNomeCliente(request.nomeCliente());
-        ordemServico.setContatoCliente(request.contatoCliente());
+        ordemServico.setCliente(cliente);
         ordemServico.setStatus(request.status());
         ordemServico.setDataCriacao(request.dataCriacao());
         ordemServico.setDataEntrega(request.dataEntrega());
@@ -70,11 +76,12 @@ public class OrdemServicoService {
                 .orElseThrow(() -> new EntityNotFoundException("Orçamento não encontrado"));
         Funcionario funcionario = funcionarioRepository.findById(request.funcionarioId())
                 .orElseThrow(() -> new EntityNotFoundException("Funcionário não encontrado"));
+        Cliente cliente = clienteRepository.findById(request.clienteId())
+                .orElseThrow(() -> new EntityNotFoundException("Cliente não encontrado"));
 
         ordemServico.setOrcamento(orcamento);
         ordemServico.setFuncionario(funcionario);
-        ordemServico.setNomeCliente(request.nomeCliente());
-        ordemServico.setContatoCliente(request.contatoCliente());
+        ordemServico.setCliente(cliente);
         ordemServico.setStatus(request.status());
         ordemServico.setDataCriacao(request.dataCriacao());
         ordemServico.setDataEntrega(request.dataEntrega());

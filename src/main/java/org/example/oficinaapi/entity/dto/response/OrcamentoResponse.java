@@ -8,6 +8,6 @@ public record OrcamentoResponse(
         Long id, String modeloVeiculo, String marcaVeiculo, BigDecimal preco
 ) {
     public static OrcamentoResponse from(Orcamento o) {
-        return new OrcamentoResponse(o.getId(), o.getModeloVeiculo(), o.getMarcaVeiculo(), o.getPreco());
+        return new OrcamentoResponse(o.getId(), o.getVeiculo().getModelo(), o.getVeiculo().getMarca(), o.getPreco());
     }
 }

@@ -11,6 +11,6 @@ public record OrdemServicoResponse(
 ) {
     public static OrdemServicoResponse from(OrdemServico os) {
         return new OrdemServicoResponse(
-                os.getId(), os.getOrcamento().getId(), os.getNomeCliente(), os.getStatus(), os.getDataCriacao(), os.getMetodoPagamento());
+                os.getId(), os.getOrcamento().getId(), os.getCliente().getNome(), os.getStatus(), os.getDataCriacao(), os.getMetodoPagamento());
     }
 }

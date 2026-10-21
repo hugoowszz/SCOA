@@ -21,15 +21,9 @@ public class Orcamento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String modeloVeiculo;
-
-    private String marcaVeiculo;
-
-    private String corVeiculo;
-
-    private int anoVeiculo;
-
-    private String placaVeiculo;
+    @OneToOne
+    @JoinColumn(name =  "veiculo_id")
+    private Veiculo veiculo;
 
     private String observacao;
 

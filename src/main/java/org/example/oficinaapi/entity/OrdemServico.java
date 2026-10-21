@@ -26,14 +26,13 @@ public class OrdemServico {
     @JoinColumn(name = "orcamento_id")
     private Orcamento orcamento;
 
-
     @OneToOne
     @JoinColumn(name = "funcionario_id")
     private Funcionario funcionario;
 
-    private String nomeCliente;
-
-    private String contatoCliente;
+    @OneToOne
+    @JoinColumn(name = "cliente_id")
+    private Cliente cliente;
 
     private String status;
 

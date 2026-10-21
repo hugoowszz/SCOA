@@ -12,8 +12,7 @@ import java.time.LocalDate;
 public record OrdemServicoRequest(
         @NotNull Long orcamentoId,
         @NotNull Long funcionarioId,
-        @NotBlank @Size(max = 200) String nomeCliente,
-        @NotBlank @Size(max = 200) String contatoCliente,
+        @NotNull Long clienteId,
         String status,
         @NotNull LocalDate dataCriacao,
         LocalDate dataEntrega,
